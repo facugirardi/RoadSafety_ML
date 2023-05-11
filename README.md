@@ -14,7 +14,7 @@ La inteligencia artificial explicable es una herramienta del aprendizaje automá
 
 #### Resources
 - Python 3.10
-- SHAP
+- SHAP 0.41
 
 #### Developers
 SHAP fue desarrolado por Scott Lundberg.
