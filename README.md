@@ -2,7 +2,7 @@
 
 - [Resumen](https://github.com/facugirardi/shap-prog3/blob/main/README.md#resumen)
 - [Problematica](https://github.com/facugirardi/shap-prog3/blob/main/README.md#problematica)
-- [Instalación](https://github.com/facugirardi/shap-prog3/blob/main/README.md#instalacion)
+- [Instalación](https://github.com/facugirardi/shap-prog3/blob/main/README.md#instalación)
 - [Ejemplo de Uso](https://github.com/facugirardi/shap-prog3/blob/main/README.md#ejemplo-de-uso)
 - [Recursos](https://github.com/facugirardi/shap-prog3/blob/main/README.md#recursos)
 - [Developers](https://github.com/facugirardi/shap-prog3/blob/main/README.md#developers)
