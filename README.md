@@ -1,5 +1,6 @@
 # SHAP - Programacion III
 
+### Indice
 - [Resumen](https://github.com/facugirardi/shap-prog3/blob/main/README.md#resumen)
 - [Problematica](https://github.com/facugirardi/shap-prog3/blob/main/README.md#problematica)
 - [Instalación](https://github.com/facugirardi/shap-prog3/blob/main/README.md#instalación)
