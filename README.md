@@ -26,8 +26,11 @@ La inteligencia artificial explicable es una herramienta del aprendizaje automá
 
 
 ### Recursos
-- Python 3.10
+- Python 3.9
 - SHAP 0.41
+- NumPy 1.24.3
+- pandas 2.0.1
+- xgboost 1.7.5
 
 
 ### Developers
