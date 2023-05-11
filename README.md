@@ -1,5 +1,5 @@
 # SHAP - Programacion III
-- [Resumen]: #Resumen
+- [Resumen]: (https://github.com/facugirardi/shap-prog3/blob/main/README.md#resumen)
 - [nombre de tu referencia]: http:www.tuenlace.com
 - [nombre de tu referencia]: http:www.tuenlace.com
 - [nombre de tu referencia]: http:www.tuenlace.com
