@@ -1,5 +1,5 @@
 # SHAP - Programacion III
-- [nombre de tu referencia]: #Resumen
+- [Resumen]: #Resumen
 - [nombre de tu referencia]: http:www.tuenlace.com
 - [nombre de tu referencia]: http:www.tuenlace.com
 - [nombre de tu referencia]: http:www.tuenlace.com
