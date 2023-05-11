@@ -2,7 +2,7 @@
 
 - [Resumen](https://github.com/facugirardi/shap-prog3/blob/main/README.md#resumen)
 - [Problematica](https://github.com/facugirardi/shap-prog3/blob/main/README.md#problematica)
-- [Instalacion](https://github.com/facugirardi/shap-prog3/blob/main/README.md#instalacion)
+- [Instalación](https://github.com/facugirardi/shap-prog3/blob/main/README.md#instalacion)
 - [Ejemplo de Uso](https://github.com/facugirardi/shap-prog3/blob/main/README.md#ejemplo-de-uso)
 - [Recursos](https://github.com/facugirardi/shap-prog3/blob/main/README.md#recursos)
 - [Developers](https://github.com/facugirardi/shap-prog3/blob/main/README.md#developers)
@@ -16,7 +16,7 @@ SHAP es una librería para realizar inteligencia artificial explicable (XAI por 
 La inteligencia artificial explicable es una herramienta del aprendizaje automático (Machine Learning) que ayuda a que las personas entiendan las denominadas “cajas negras” difíciles de interpretar.
 
 
-#### Instalacion
+#### Instalación
 > pip install shap
 
 
