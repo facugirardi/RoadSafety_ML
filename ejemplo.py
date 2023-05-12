@@ -1,3 +1,4 @@
+#Sklearn
 from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn import datasets
 
@@ -7,8 +8,7 @@ from xgboost import XGBClassifier
 #Explicar
 import shap
 
-
-# lectura de datos
+# Lectura de datos
 data = datasets.load_breast_cancer()
 print(data['DESCR'])
 
