@@ -21,7 +21,6 @@ La inteligencia artificial explicable es una herramienta del aprendizaje automá
 
 ### Instalación
 > - pip install shap
-> - pip install scikit-learn
 > - pip install xgboost
 
 
@@ -33,7 +32,6 @@ La inteligencia artificial explicable es una herramienta del aprendizaje automá
 - Python 3.9
 - SHAP 0.41
 - xgboost 1.7.5
-- scikit-learn 1.2.2
 
 
 ### Developers
