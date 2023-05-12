@@ -35,4 +35,4 @@ La inteligencia artificial explicable es una herramienta del aprendizaje automá
 
 
 ### Developers
-Desarrollado por : Nicolas Bergliaffa, Facundo Girardi, Alejo Vaquero.
+Desarrollado por: Nicolas Bergliaffa, Facundo Girardi, Alejo Vaquero.
