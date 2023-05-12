@@ -1,4 +1,8 @@
+import pandas as pd
+import numpy as np
+
 from sklearn.model_selection import GridSearchCV, train_test_split
+from sklearn.metrics import roc_auc_score
 from sklearn import datasets
 
 #Modelo
@@ -48,3 +52,7 @@ explainer_shap = shap.TreeExplainer(model)
 
 shap_values = explainer_shap.shap_values(X_eval)
 shap.summary_plot(shap_values, X_eval, feature_names=data['feature_names'])
+
+
+
+    
