@@ -1,13 +1,5 @@
-import pandas as pd
-import numpy as np
-
 from sklearn.model_selection import GridSearchCV, train_test_split
-from sklearn.metrics import roc_auc_score
 from sklearn import datasets
-
-#Graficos
-import seaborn as sns
-import matplotlib.pyplot as plt
 
 #Modelo
 from xgboost import XGBClassifier
