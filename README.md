@@ -24,7 +24,7 @@ La inteligencia artificial explicable es una herramienta del aprendizaje automá
 
 
 ### Ejemplo de Uso
-> python3 ejemplo*.py
+> python3 ejemplo.py
 
 
 ### Recursos
