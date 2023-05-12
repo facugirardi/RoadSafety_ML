@@ -11,7 +11,7 @@
 
 ### Resumen
 SHAP es una librería para realizar inteligencia artificial explicable (XAI por sus siglas in inglés eXplainable Artificial Intelligence). Utiliza cálculos del campo de la teoría de juegos para averiguar qué variables tienen más influencia en las predicciones de las técnicas de machine learning.
-
+Este ejemplo esta desarrollado para poder predecir si un cancer de mama es benigno o maligno.
 
 ### Problematica
 La inteligencia artificial explicable es una herramienta del aprendizaje automático (Machine Learning) que ayuda a que las personas entiendan las denominadas “cajas negras” difíciles de interpretar.
@@ -35,4 +35,4 @@ La inteligencia artificial explicable es una herramienta del aprendizaje automá
 
 
 ### Developers
-SHAP fue desarrolado por Scott Lundberg.
+Desarrollado por : Nicolas Bergliaffa, Facundo Girardi, Alejo Vaquero.
