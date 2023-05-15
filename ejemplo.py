@@ -24,9 +24,8 @@ X_train, X_eval, y_train, y_eval = train_test_split(X, y, test_size=0.50)
 # Crear modelo
 model = XGBClassifier()
 
+# Definir parametros
 parameters = {
-    'learning_rate': [0.01, 0.1, 0.001],
-    'max_depth': [3, 4, 5],
     'n_estimators': [10, 50, 100]
 }
 
