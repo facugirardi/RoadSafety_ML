@@ -20,15 +20,8 @@ params = {
 }
 
 
-num_rounds = 75  # Número de rondas de entrenamiento
+num_rounds = 60  # Número de rondas de entrenamiento
 model = xgb.train(params, dtrain, num_rounds)
-
-explainer_shap = shap.TreeExplainer(model)
-shap_values = explainer_shap.shap_values(X_test)
-
-
-def shap_enable():
-    shap.summary_plot(shap_values, X_test, feature_names=names)
 
 
 # Título de la app
@@ -58,25 +51,6 @@ wind_chill = (sensacion_termica * 9/5) + 32
 pressure = presion * 0.029530100
 wind_speed = velocidad_viento / 1.6
 precip = precipitaciones / 25.4
-
-
-names = ['Distance(mi)',
-        'Temperature(F)',
-        'Wind_Chill(F)',
-        'Humidity(%)',
-        'Pressure(in)',
-        'Visibility(mi)',
-        'Wind_Speed(mph)',
-        'Precipitation(in)',
-        'Bump',
-        'Crossing',
-        'Roundabout',
-        'Stop',
-        'Traffic_Signal',
-        'Accident_year',
-        'Accident_month',
-        'Accident_hour']
-
 
 new_data = [
     {
@@ -111,4 +85,24 @@ pred = y_new_pred_proba[0] * 100
 prediccion_text = f'**Tenes {int(pred)}% de probabilidades de tener un accidente automovilistico.**'
 prediccion_label = st.write(prediccion_text)
 
-st.button("Activar SHAP", on_click=shap_enable())
+
+names = ['Distance(mi)',
+        'Temperature(F)',
+        'Wind_Chill(F)',
+        'Humidity(%)',
+        'Pressure(in)',
+        'Visibility(mi)',
+        'Wind_Speed(mph)',
+        'Precipitation(in)',
+        'Bump',
+        'Crossing',
+        'Roundabout',
+        'Stop',
+        'Traffic_Signal',
+        'Accident_year',
+        'Accident_month',
+        'Accident_hour']
+
+explainer_shap = shap.TreeExplainer(model)
+shap_values = explainer_shap.shap_values(X_test)
+shap.summary_plot(shap_values, X_test, feature_names=names)
