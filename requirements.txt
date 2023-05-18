@@ -1,3 +1,4 @@
 shap
 xgboost
-python 
+streamlit
+pandas
