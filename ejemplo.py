@@ -1,11 +1,6 @@
-#Sklearn
 from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn import datasets
-
-#Modelo
 from xgboost import XGBClassifier
-
-#Explicar
 import shap
 
 # Lectura de datos
