@@ -11,6 +11,7 @@ import shap
 # Lectura de datos
 data = datasets.load_breast_cancer()
 print(data['DESCR'])
+print(data.target_names)
 
 # Datos necesarios para realizar las predicciones
 x = data['data']
@@ -26,7 +27,6 @@ model = XGBClassifier()
 
 # Definir parametros
 parameters = {
-    'n_estimators': [10, 50, 100]
 }
 
 gs = GridSearchCV(model, parameters)
@@ -39,6 +39,7 @@ model.fit(X_train, y_train)
 """ Ya se puede empezar a realizar predicciones
  En este caso predict_proba arroja un vector en el que se muestra la probabilidad del cancer benigno y el maligno. 
 """
+
 pred_prob = model.predict_proba(X_train)
 print(pred_prob)
 
