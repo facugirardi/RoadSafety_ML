@@ -23,6 +23,13 @@ params = {
 num_rounds = 75  # Número de rondas de entrenamiento
 model = xgb.train(params, dtrain, num_rounds)
 
+explainer_shap = shap.TreeExplainer(model)
+shap_values = explainer_shap.shap_values(X_test)
+
+
+def shap_enable():
+    shap.summary_plot(shap_values, X_test, feature_names=names)
+
 
 # Título de la app
 st.title("Probabilidad de Accidente en Auto")
@@ -104,8 +111,4 @@ pred = y_new_pred_proba[0] * 100
 prediccion_text = f'**Tenes {int(pred)}% de probabilidades de tener un accidente automovilistico.**'
 prediccion_label = st.write(prediccion_text)
 
-def shap_enable():
-    explainer_shap = shap.TreeExplainer(model)
-
-    shap_values = explainer_shap.shap_values(X_test)
-    shap.summary_plot(shap_values, X_test, feature_names=names)
+st.button("Activar SHAP", on_click=shap_enable())
