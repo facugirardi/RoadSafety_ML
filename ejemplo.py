@@ -13,13 +13,13 @@ data = datasets.load_breast_cancer()
 print(data['DESCR'])
 
 # Datos necesarios para realizar las predicciones
-X = data['data']
+x = data['data']
 
 # Variable a predecir (prediccion)
 y = data['target']
 
-# ENTRENAMIENTO DEL MODELO
-X_train, X_eval, y_train, y_eval = train_test_split(X, y, test_size=0.50)
+# Division de datos
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.40)
 
 # Crear modelo
 model = XGBClassifier()
@@ -30,7 +30,7 @@ parameters = {
 }
 
 gs = GridSearchCV(model, parameters)
-gs.fit(X_eval, y_eval, verbose=False)
+gs.fit(X_test, y_test, verbose=False)
 
 # Seleccionar los mejores parametros
 model.set_params(**gs.best_params_)
@@ -45,8 +45,5 @@ print(pred_prob)
 # Explicar el modelo utilizando SHAP
 explainer_shap = shap.TreeExplainer(model)
 
-shap_values = explainer_shap.shap_values(X_eval)
-shap.summary_plot(shap_values, X_eval, feature_names=data['feature_names'])
-
-
-    
+shap_values = explainer_shap.shap_values(X_test)
+shap.summary_plot(shap_values, X_test, feature_names=data['feature_names'])
