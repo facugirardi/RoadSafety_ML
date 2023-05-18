@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 import xgboost as xgb
 import streamlit as st
+import shap
 
 data = pd.read_csv('/home/facu/shap-prog3/shap-prog3/accident-data.csv')
 
@@ -19,12 +20,12 @@ params = {
 }
 
 
-num_rounds = 100  # Número de rondas de entrenamiento
+num_rounds = 75  # Número de rondas de entrenamiento
 model = xgb.train(params, dtrain, num_rounds)
 
 
 # Título de la aplicación
-st.title("Predicción de Probabilidad de Accidente")
+st.title("Probabilidad de Accidente en Auto")
 
 # Inputs en filas de a 3
 row1_col1, row1_col2, row1_col3 = st.columns(3)
@@ -39,7 +40,7 @@ humedad = row2_col1.number_input("Humedad (%)", min_value=0, max_value=100, step
 presion = row2_col2.number_input("Presión (hPa)")
 velocidad_viento = row2_col3.number_input("Velocidad del viento (km/h)")
 precipitaciones = row3_col1.number_input("Precipitaciones (mm)")
-year = row3_col2.number_input("Año", min_value=1900, max_value=2100, step=1)
+year = row3_col2.number_input("Año", min_value=2000, max_value=2100, step=1)
 mes = row3_col3.number_input("Mes", min_value=1, max_value=12, step=1)
 hora = st.number_input("Hora", min_value=0, max_value=23, step=1)
 
@@ -72,6 +73,23 @@ new_data = [
     }
 ]
 
+names = ['Distance(mi)',
+        'Temperature(F)',
+        'Wind_Chill(F)',
+        'Humidity(%)',
+        'Pressure(in)',
+        'Visibility(mi)',
+        'Wind_Speed(mph)',
+        'Precipitation(in)',
+        'Bump',
+        'Crossing',
+        'Roundabout',
+        'Stop',
+        'Traffic_Signal',
+        'Accident_year',
+        'Accident_month',
+        'Accident_hour']
+
 new_df = pd.DataFrame(new_data)
 
 dnew = xgb.DMatrix(new_df)
@@ -79,3 +97,13 @@ dnew = xgb.DMatrix(new_df)
 y_new_pred_proba = model.predict(dnew)
 print(y_new_pred_proba)
 
+pred = y_new_pred_proba[0] * 100
+
+prediccion_text = f'**Tenes {int(pred)}% de probabilidades de tener un accidente automovilistico.**'
+prediccion_label = st.write(prediccion_text)
+
+# Explicar el modelo utilizando SHAP
+explainer_shap = shap.TreeExplainer(model)
+
+shap_values = explainer_shap.shap_values(X_test)
+shap.summary_plot(shap_values, X_test, feature_names=names)
