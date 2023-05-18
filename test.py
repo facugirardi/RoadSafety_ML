@@ -24,7 +24,7 @@ num_rounds = 75  # Número de rondas de entrenamiento
 model = xgb.train(params, dtrain, num_rounds)
 
 
-# Título de la aplicación
+# Título de la app
 st.title("Probabilidad de Accidente en Auto")
 
 # Inputs en filas de a 3
@@ -52,6 +52,25 @@ pressure = presion * 0.029530100
 wind_speed = velocidad_viento / 1.6
 precip = precipitaciones / 25.4
 
+
+names = ['Distance(mi)',
+        'Temperature(F)',
+        'Wind_Chill(F)',
+        'Humidity(%)',
+        'Pressure(in)',
+        'Visibility(mi)',
+        'Wind_Speed(mph)',
+        'Precipitation(in)',
+        'Bump',
+        'Crossing',
+        'Roundabout',
+        'Stop',
+        'Traffic_Signal',
+        'Accident_year',
+        'Accident_month',
+        'Accident_hour']
+
+
 new_data = [
     {
         'Distance(mi)': distance,
@@ -73,23 +92,6 @@ new_data = [
     }
 ]
 
-names = ['Distance(mi)',
-        'Temperature(F)',
-        'Wind_Chill(F)',
-        'Humidity(%)',
-        'Pressure(in)',
-        'Visibility(mi)',
-        'Wind_Speed(mph)',
-        'Precipitation(in)',
-        'Bump',
-        'Crossing',
-        'Roundabout',
-        'Stop',
-        'Traffic_Signal',
-        'Accident_year',
-        'Accident_month',
-        'Accident_hour']
-
 new_df = pd.DataFrame(new_data)
 
 dnew = xgb.DMatrix(new_df)
@@ -102,8 +104,8 @@ pred = y_new_pred_proba[0] * 100
 prediccion_text = f'**Tenes {int(pred)}% de probabilidades de tener un accidente automovilistico.**'
 prediccion_label = st.write(prediccion_text)
 
-# Explicar el modelo utilizando SHAP
-explainer_shap = shap.TreeExplainer(model)
+def shap_enable():
+    explainer_shap = shap.TreeExplainer(model)
 
-shap_values = explainer_shap.shap_values(X_test)
-shap.summary_plot(shap_values, X_test, feature_names=names)
+    shap_values = explainer_shap.shap_values(X_test)
+    shap.summary_plot(shap_values, X_test, feature_names=names)
