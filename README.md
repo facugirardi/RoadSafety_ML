@@ -27,9 +27,9 @@ Luego de ver la cantidad de choques automovilisticos que suceden diariamente, es
 
 
 ### Ejemplo de Uso
-> python ejemplo.py
-> python main.py
-> python -m streamlit run main.py
+> - python ejemplo.py
+> - python main.py
+> - python -m streamlit run main.py
 
 ### Recursos
 - Python 3.10
