@@ -2,3 +2,4 @@ shap
 xgboost
 streamlit
 pandas
+matplotlib
