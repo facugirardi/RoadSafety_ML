@@ -106,5 +106,5 @@ names = ['Distance(mi)',
         'Accident_hour']
 
 explainer_shap = shap.TreeExplainer(model)
-shap_values = explainer_shap.shap_values(X_test)
-shap.summary_plot(shap_values, X_test, feature_names=names)
+shap_values = explainer_shap.shap_values(X_train)
+shap.summary_plot(shap_values, X_train, feature_names=names)
