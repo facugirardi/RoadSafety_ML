@@ -12,7 +12,10 @@ data = pd.read_csv('/home/facu/shap-prog3/shap-prog3/accident-data.csv')
 X = data.drop('Probability', axis=1)
 y = data['Probability']
 
-dtrain = xgb.DMatrix(X, label=y)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=42)
+
+dtrain = xgb.DMatrix(X_train, label=y_train)
+dtest = xgb.DMatrix(X_test, label=y_test)
 
 params = {}
 
@@ -103,5 +106,5 @@ names = ['Distance(mi)',
         'Accident_hour']
 
 explainer_shap = shap.TreeExplainer(model)
-shap_values = explainer_shap.shap_values(X)
-shap.summary_plot(shap_values, X, feature_names=names)
+shap_values = explainer_shap.shap_values(X_test)
+shap.summary_plot(shap_values, X_test, feature_names=names)
