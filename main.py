@@ -64,7 +64,7 @@ new_data = [
         'Wind_Speed(mph)': wind_speed,
         'Precipitation(in)': precip,
         'Bump': True,
-        'Crossing': False,
+        'Crossing': True,
         'Roundabout': False,
         'Stop': True,
         'Traffic_Signal': True,
@@ -109,4 +109,4 @@ shap.summary_plot(shap_values, X_train, feature_names=names, show=False)
 plt.savefig('shap.png')
 
 st.write('**Grafico SHAP**')
-st.image('shap.png')
+st.image('shap.png', caption='Grafico SHAP')
