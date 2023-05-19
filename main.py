@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 import xgboost as xgb
 import streamlit as st
+import matplotlib.pyplot as plt
 import shap
 
 
@@ -104,4 +105,8 @@ names = ['Distance(mi)',
 
 explainer_shap = shap.TreeExplainer(model)
 shap_values = explainer_shap.shap_values(X_train)
-shap.summary_plot(shap_values, X_train, feature_names=names)
+shap.summary_plot(shap_values, X_train, feature_names=names, show=False)
+plt.savefig('shap.png')
+
+st.write('**Grafico SHAP**')
+st.image('shap.png')

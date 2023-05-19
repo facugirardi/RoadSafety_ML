@@ -8,6 +8,7 @@ shap = "*"
 xgboost = "*"
 streamlit = "*"
 pandas = "*"
+matplotlib = "*"
 
 [dev-packages]
 
