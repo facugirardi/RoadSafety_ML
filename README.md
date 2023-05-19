@@ -1,5 +1,6 @@
 # SHAP - Programacion III
 
+
 ### Indice
 - [Resumen](https://github.com/facugirardi/shap-prog3/blob/main/README.md#resumen)
 - [Problematica](https://github.com/facugirardi/shap-prog3/blob/main/README.md#problematica)
@@ -19,6 +20,7 @@ En el proyecto, el objetivo es conseguir la probabilidad de tener un accidente a
 La inteligencia artificial explicable es una herramienta del aprendizaje automático (Machine Learning) que ayuda a que las personas entiendan las denominadas “cajas negras” difíciles de interpretar.
 Luego de ver la cantidad de choques automovilisticos que suceden diariamente, este proyecto trata de prevenir y ayudar a entender el 'porque' de la gran cantidad de choques diarios.
 
+
 ### Instalación
 > - pip install shap
 > - pip install xgboost
@@ -30,6 +32,7 @@ Luego de ver la cantidad de choques automovilisticos que suceden diariamente, es
 > - python ejemplo.py
 > - python main.py
 > - python -m streamlit run main.py
+
 
 ### Recursos
 - Python 3.10
