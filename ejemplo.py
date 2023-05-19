@@ -21,14 +21,12 @@ X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.40)
 model = XGBClassifier()
 
 # Definir parametros
-parameters = {
-}
+parameters = {}
 
 gs = GridSearchCV(model, parameters)
 gs.fit(X_test, y_test, verbose=False)
 
 # Seleccionar los mejores parametros
-model.set_params(**gs.best_params_)
 model.fit(X_train, y_train)
 
 """ Ya se puede empezar a realizar predicciones

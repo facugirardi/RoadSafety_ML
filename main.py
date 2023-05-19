@@ -74,13 +74,10 @@ new_data = [
 ]
 
 new_df = pd.DataFrame(new_data)
-
 dnew = xgb.DMatrix(new_df)
 
-y_new_pred_proba = model.predict(dnew)
-print(y_new_pred_proba)
-
-pred = y_new_pred_proba[0] * 100
+pred_proba = model.predict(dnew)
+pred = pred_proba[0] * 100
 
 prediccion_text = f'**Tenes {int(pred)}% de probabilidades de tener un accidente automovilistico.**'
 prediccion_label = st.write(prediccion_text)
