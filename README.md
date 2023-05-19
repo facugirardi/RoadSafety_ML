@@ -35,8 +35,8 @@ Luego de ver la cantidad de choques automovilisticos que suceden diariamente, es
 - Python 3.10
 - SHAP 0.41
 - xgboost 1.7.5
-- Pandas 
-- Streamlit
+- Pandas 1.3.5
+- Streamlit 1.22
 
 
 ### Developers
