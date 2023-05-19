@@ -4,35 +4,30 @@ import xgboost as xgb
 import streamlit as st
 import shap
 
+
+# Modelo ML
+
 data = pd.read_csv('/home/facu/shap-prog3/shap-prog3/accident-data.csv')
 
 X = data.drop('Probability', axis=1)
 y = data['Probability']
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+dtrain = xgb.DMatrix(X, label=y)
 
-dtrain = xgb.DMatrix(X_train, label=y_train)
-dtest = xgb.DMatrix(X_test, label=y_test)
+params = {}
 
-params = {
-    'objective': 'binary:logistic',  # Para problemas de clasificación binaria
-    'eval_metric': 'logloss'  # Métrica de evaluación: log loss
-}
-
-
-num_rounds = 60  # Número de rondas de entrenamiento
+num_rounds = 60
 model = xgb.train(params, dtrain, num_rounds)
 
 
-# Título de la app
+# Streamlit
+
 st.title("Probabilidad de Accidente en Auto")
 
-# Inputs en filas de a 3
 row1_col1, row1_col2, row1_col3 = st.columns(3)
 row2_col1, row2_col2, row2_col3 = st.columns(3)
 row3_col1, row3_col2, row3_col3 = st.columns(3)
 
-# Solicitar inputs
 distancia = row1_col1.number_input("Distancia (KM)", min_value=0.0)
 temperatura = row1_col2.number_input("Temperatura (Celsius)")
 sensacion_termica = row1_col3.number_input("Sensación Térmica (Celsius)")
@@ -44,7 +39,9 @@ year = row3_col2.number_input("Año", min_value=2000, max_value=2100, step=1)
 mes = row3_col3.number_input("Mes", min_value=1, max_value=12, step=1)
 hora = st.number_input("Hora", min_value=0, max_value=23, step=1)
 
-# Conversion de medidas
+
+# Datos para la prediccion
+
 distance = distancia / 1.6
 temperature = (temperatura * 9/5) + 32
 wind_chill = (sensacion_termica * 9/5) + 32
@@ -86,6 +83,8 @@ prediccion_text = f'**Tenes {int(pred)}% de probabilidades de tener un accidente
 prediccion_label = st.write(prediccion_text)
 
 
+# Shap
+
 names = ['Distance(mi)',
         'Temperature(F)',
         'Wind_Chill(F)',
@@ -103,7 +102,6 @@ names = ['Distance(mi)',
         'Accident_month',
         'Accident_hour']
 
-# Grafico Shap
 explainer_shap = shap.TreeExplainer(model)
-shap_values = explainer_shap.shap_values(X_test)
-shap.summary_plot(shap_values, X_test, feature_names=names)
+shap_values = explainer_shap.shap_values(X)
+shap.summary_plot(shap_values, X, feature_names=names)
