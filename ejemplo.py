@@ -1,4 +1,3 @@
-from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn import datasets
 from xgboost import XGBClassifier
 import shap
