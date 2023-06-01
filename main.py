@@ -4,7 +4,9 @@ import xgboost as xgb
 import streamlit as st
 import matplotlib.pyplot as plt
 import shap
-
+import streamlit as st
+from ai import generate_bot_response, display_chat_history
+import streamlit_chat as stc
 
 # Modelo ML
 
@@ -25,10 +27,6 @@ model = xgb.train(params, dtrain, num_rounds)
 
 
 # Streamlit
-
-
-st.title("Seguridad Vial")
-
 st.sidebar.title("Navegación")
 pages = ["Inicio", "Chat"]
 choice = st.sidebar.radio("Ir a", pages)
@@ -117,11 +115,20 @@ if choice == "Inicio":
     st.write('**Grafico SHAP**')
     st.image('shap.png', caption='Grafico SHAP')    
 
-elif choice == "Chat":
-    st.header("ChatBot")
-    
-    user_input = st.text_input("Usuario:")
+elif choice == "Chat":    
+
+    st.title("ChatBot")
+
+    chat_history = []
+
+    user_input = st.text_input("Escribe un mensaje:")
+
     if st.button("Enviar"):
-        bot_response = 'hola'
-        st.text("Bot:" + bot_response)
+        chat_history.append(("Usuario", user_input))
+
+        bot_response = generate_bot_response(user_input)
+
+        chat_history.append(("Bot", bot_response))
+
+    display_chat_history(chat_history)
 
