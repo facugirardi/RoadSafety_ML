@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import shap
 import streamlit as st
 from ai import generate_bot_response, display_chat_history
-import streamlit_chat as stc
 
 # Modelo ML
 

@@ -3,3 +3,5 @@ xgboost
 streamlit
 pandas
 matplotlib
+streamlit_chat
+openai
