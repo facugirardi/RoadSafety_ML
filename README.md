@@ -32,7 +32,6 @@ Tambien, posee un ChatBot especializado en la seguridad vial, con el que se pued
 
 ### Ejemplo de Uso
 > - python ejemplo.py
-> - python main.py
 > - python -m streamlit run main.py
 
 
