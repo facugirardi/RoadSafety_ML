@@ -23,7 +23,7 @@ def generate_bot_response(user_input):
     conv_history.append({"role":"user", "content":message})
     
     response = openai.ChatCompletion.create(
-        model = "gpt-3.5-turbo", messages=conv_history
+        model = "gpt-3.5-turbo", messages=conv_history, max_tokens = 150, temperature = 0
     )
 
     response_content = response['choices'][0]['message']['content']
