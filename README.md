@@ -12,8 +12,8 @@
 
 ### Resumen
 SHAP es una librería para realizar inteligencia artificial explicable (XAI por sus siglas in inglés eXplainable Artificial Intelligence). Utiliza cálculos del campo de la teoría de juegos para averiguar qué variables tienen más influencia en las predicciones de las técnicas de machine learning.
-En el ejemplo se busca predecir si un cáncer de mama es benigno o maligno.
-En el proyecto, el objetivo es conseguir la probabilidad de tener un accidente automovilistico, luego de ingresar datos como pueden ser: Temperatura, Velocidad del viento, Humedad, etc.
+En el ejemplo 1 se busca predecir si un cáncer de mama es benigno o maligno.
+En el ejemplo 2, el objetivo es conseguir la probabilidad de tener un accidente automovilistico, luego de ingresar datos como pueden ser: Temperatura, Velocidad del viento, Humedad, etc.
 Adicionalmente, el proyecto posee una integracion de la API de OpenAI, para el uso de un ChatBot.
 
 
