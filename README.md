@@ -1,26 +1,23 @@
-# Presentación SHAP
+# SHAP Presentation
 
 
-### Indice
-- [Resumen](https://github.com/facugirardi/shap-prog3/blob/main/README.md#resumen)
-- [Problematica](https://github.com/facugirardi/shap-prog3/blob/main/README.md#problematica)
-- [Instalación](https://github.com/facugirardi/shap-prog3/blob/main/README.md#instalación)
-- [Ejemplo de Uso](https://github.com/facugirardi/shap-prog3/blob/main/README.md#ejemplo-de-uso)
-- [Recursos](https://github.com/facugirardi/shap-prog3/blob/main/README.md#recursos)
-- [Developers](https://github.com/facugirardi/shap-prog3/blob/main/README.md#developers)
+### Table of Contents
+- [Summary](https://github.com/facugirardi/shap-prog3/blob/main/README.md#resumen)
+- [Problem Statement](https://github.com/facugirardi/shap-prog3/blob/main/README.md#problematica)
+- [Installation](https://github.com/facugirardi/shap-prog3/blob/main/README.md#instalación)
+- [Example Usage](https://github.com/facugirardi/shap-prog3/blob/main/README.md#ejemplo-de-uso)
 
 
-### Resumen
-SHAP es una librería diseñada para implementar Inteligencia Artificial Explicable (XAI, por sus siglas en inglés, eXplainable Artificial Intelligence). Utiliza conceptos de la teoría de juegos para determinar qué variables tienen mayor influencia en las predicciones de técnicas de aprendizaje automático. 
-En esta aplicación específica, el propósito es calcular la probabilidad de sufrir un accidente automovilístico utilizando datos como temperatura, velocidad del viento, humedad, entre otros. Además, el proyecto incluye una integración de la API de OpenAI para un ChatBot relacionado con la seguridad vial.
+### Summary
+SHAP is a library designed to implement Explainable Artificial Intelligence (XAI). It utilizes concepts from game theory to determine which variables have the most significant influence on machine learning predictions. 
+In this specific application, the goal is to calculate the probability of experiencing a car accident using data such as temperature, wind speed, humidity, among others. Additionally, the project integrates the OpenAI API for a ChatBot related to road safety.
+
+### Problem Statement
+Explainable Artificial Intelligence is a crucial tool in machine learning for understanding opaque models or so-called "black boxes". 
+Given the high number of daily traffic accidents, this project aims to prevent them and facilitate understanding the underlying reasons. Moreover, it features a specialized ChatBot in road safety that enables conversation, questions, and advice.
 
 
-### Problematica
-La Inteligencia Artificial Explicable es una herramienta crucial en el aprendizaje automático para comprender modelos opacos o las denominadas "cajas negras". 
-Dado el elevado número de accidentes de tráfico diarios, este proyecto busca prevenirlos y facilitar la comprensión de las razones detrás de ellos. Además, cuenta con un ChatBot especializado en seguridad vial que permite conversar, hacer preguntas y recibir consejos.
-
-
-### Instalación
+### Installation
 > - pip install shap==0.41
 > - pip install xgboost==1.7.5
 > - pip install streamlit==1.22
@@ -28,5 +25,5 @@ Dado el elevado número de accidentes de tráfico diarios, este proyecto busca p
 > - pip install openai==0.27.7
 
 
-### Ejecución Ejemplo de Uso
+### Example Usage
 > - python -m streamlit run main.py
