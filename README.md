@@ -1,4 +1,4 @@
-# SHAP - Programacion III
+# Presentación SHAP
 
 
 ### Indice
@@ -11,33 +11,22 @@
 
 
 ### Resumen
-SHAP es una librería para realizar inteligencia artificial explicable (XAI por sus siglas in inglés eXplainable Artificial Intelligence). Utiliza cálculos del campo de la teoría de juegos para averiguar qué variables tienen más influencia en las predicciones de las técnicas de machine learning.
-En la aplicación, el objetivo es conseguir la probabilidad de tener un accidente automovilistico, luego de ingresar datos como pueden ser: Temperatura, Velocidad del viento, Humedad, etc.
-Adicionalmente, el proyecto posee una integracion de la API de OpenAI, para el uso de un ChatBot.
+SHAP es una librería diseñada para implementar Inteligencia Artificial Explicable (XAI, por sus siglas en inglés, eXplainable Artificial Intelligence). Utiliza conceptos de la teoría de juegos para determinar qué variables tienen mayor influencia en las predicciones de técnicas de aprendizaje automático. 
+En esta aplicación específica, el propósito es calcular la probabilidad de sufrir un accidente automovilístico utilizando datos como temperatura, velocidad del viento, humedad, entre otros. Además, el proyecto incluye una integración de la API de OpenAI para un ChatBot relacionado con la seguridad vial.
 
 
 ### Problematica
-La inteligencia artificial explicable es una herramienta del aprendizaje automático (Machine Learning) que ayuda a que las personas entiendan las denominadas “cajas negras” difíciles de interpretar.
-Luego de ver la cantidad de choques automovilisticos que suceden diariamente, este proyecto trata de prevenir y ayudar a entender el 'porque' de la gran cantidad de choques diarios.
-Tambien, posee un ChatBot especializado en la seguridad vial, con el que se puede conversar, realizar preguntas, pedir consejos, etc.
+La Inteligencia Artificial Explicable es una herramienta crucial en el aprendizaje automático para comprender modelos opacos o las denominadas "cajas negras". 
+Dado el elevado número de accidentes de tráfico diarios, este proyecto busca prevenirlos y facilitar la comprensión de las razones detrás de ellos. Además, cuenta con un ChatBot especializado en seguridad vial que permite conversar, hacer preguntas y recibir consejos.
 
 
 ### Instalación
-> - pip install shap
-> - pip install xgboost
-> - pip install streamlit
-> - pip install pandas
+> - pip install shap==0.41
+> - pip install xgboost==1.7.5
+> - pip install streamlit==1.22
+> - pip install pandas==1.3.5
+> - pip install openai==0.27.7
 
 
 ### Ejecución Ejemplo de Uso
 > - python -m streamlit run main.py
-
-
-### Recursos
-- Python 3.10
-- SHAP 0.41
-- xgboost 1.7.5
-- Pandas 1.3.5
-- Streamlit 1.22
-- OpenAI 0.27.7
-- Streamlit Chat 0.0.2.2
