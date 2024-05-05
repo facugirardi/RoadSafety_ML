@@ -12,8 +12,7 @@
 
 ### Resumen
 SHAP es una librería para realizar inteligencia artificial explicable (XAI por sus siglas in inglés eXplainable Artificial Intelligence). Utiliza cálculos del campo de la teoría de juegos para averiguar qué variables tienen más influencia en las predicciones de las técnicas de machine learning.
-En el ejemplo 1 se busca predecir si un cáncer de mama es benigno o maligno.
-En el ejemplo 2, el objetivo es conseguir la probabilidad de tener un accidente automovilistico, luego de ingresar datos como pueden ser: Temperatura, Velocidad del viento, Humedad, etc.
+En la aplicación, el objetivo es conseguir la probabilidad de tener un accidente automovilistico, luego de ingresar datos como pueden ser: Temperatura, Velocidad del viento, Humedad, etc.
 Adicionalmente, el proyecto posee una integracion de la API de OpenAI, para el uso de un ChatBot.
 
 
@@ -30,8 +29,7 @@ Tambien, posee un ChatBot especializado en la seguridad vial, con el que se pued
 > - pip install pandas
 
 
-### Ejemplo de Uso
-> - python ejemplo.py
+### Ejecución Ejemplo de Uso
 > - python -m streamlit run main.py
 
 
@@ -43,7 +41,3 @@ Tambien, posee un ChatBot especializado en la seguridad vial, con el que se pued
 - Streamlit 1.22
 - OpenAI 0.27.7
 - Streamlit Chat 0.0.2.2
-
-
-### Developers
-Desarrollado por: Facundo Girardi, Nicolas Bergliaffa, Alejo Vaquero.
