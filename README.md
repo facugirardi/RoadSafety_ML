@@ -2,10 +2,10 @@
 
 
 ### Table of Contents
-- [Summary](https://github.com/facugirardi/shap-prog3/blob/main/README.md#resumen)
-- [Problem Statement](https://github.com/facugirardi/shap-prog3/blob/main/README.md#problematica)
-- [Installation](https://github.com/facugirardi/shap-prog3/blob/main/README.md#instalación)
-- [Example Usage](https://github.com/facugirardi/shap-prog3/blob/main/README.md#ejemplo-de-uso)
+- [Summary](#Summary)
+- [Problem Statement](#Problem-Statement)
+- [Installation](#Installation)
+- [Example Usage](#Example-Usage)
 
 
 ### Summary
